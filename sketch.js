@@ -34,7 +34,7 @@ function setup() {
 
   
 
-  bg.velocityY=-5
+  
 
   iron = createSprite(200,505,20,50);
   iron.addImage(ironImg);
@@ -52,16 +52,16 @@ function setup() {
 
 }
 
-function draw() {
-  if(gameState=== "PLAY"){
-    bg.velocityY=-5
+
   
-  iron.setCollider("rectangle",0,0,200,500);
+  
 
-}
+
 
 function draw() {
-
+  if(gameState==="PLAY")
+{
+  bg.velocityY=-5
   //jump on space
   if(keyDown("space") ) {
     iron.velocityY = -16;
