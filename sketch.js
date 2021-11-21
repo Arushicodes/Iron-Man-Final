@@ -5,10 +5,8 @@ var stoneGroup, stoneImg;
 var diamond, diamondGroup, diamondImage;
 var diamondScore=0;
 var spike, spikesGroup, spikesImage;
-<<<<<<< HEAD
 var gameState= "PLAY";
-=======
->>>>>>> b93ab3fa34fde2c7416aaa1a67e4791723c39275
+
 
 //definition of function preload to load the game assets
 function preload() {
@@ -17,10 +15,9 @@ function preload() {
   stoneImg=loadImage("images/stone.png");
   diamondImage= loadImage("images/diamond.png");
   spikesImage= loadImage("images/spikes.png");
-<<<<<<< HEAD
+
   restartImage= loadImage("images/restart.png");
-=======
->>>>>>> b93ab3fa34fde2c7416aaa1a67e4791723c39275
+
 
 
  
@@ -34,11 +31,11 @@ function setup() {
   bg.addImage(backgroundImg);
   bg.scale=2
   //make bg move
-<<<<<<< HEAD
+
   
-=======
+
   bg.velocityY=-5
->>>>>>> b93ab3fa34fde2c7416aaa1a67e4791723c39275
+
   iron = createSprite(200,505,20,50);
   iron.addImage(ironImg);
   iron.scale= 0.5
@@ -49,7 +46,6 @@ function setup() {
   stoneGroup=new Group()
   diamondGroup=new Group()
   spikesGroup= new Group()
-<<<<<<< HEAD
   restart = createSprite(500,300);
   restart.addImage(restartImage);
   restart.visible= false;
@@ -61,11 +57,11 @@ function draw() {
     bg.velocityY=-5
   
   iron.setCollider("rectangle",0,0,200,500);
-=======
+
 }
 
 function draw() {
->>>>>>> b93ab3fa34fde2c7416aaa1a67e4791723c39275
+
   //jump on space
   if(keyDown("space") ) {
     iron.velocityY = -16;
@@ -93,10 +89,9 @@ function draw() {
   if (temp.isTouching(iron)) {
      iron.collide(temp);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> b93ab3fa34fde2c7416aaa1a67e4791723c39275
+
+
       
   }
   //call out function to generate diamond
@@ -126,7 +121,6 @@ function draw() {
         temp.destroy();
         temp=null;
         }
-<<<<<<< HEAD
       }
         if(diamondScore<=-10 || iron.y>610){
           gameState="END";
@@ -148,9 +142,7 @@ function draw() {
           restartGame();
         }
         
-=======
-          
->>>>>>> b93ab3fa34fde2c7416aaa1a67e4791723c39275
+
       }
       
 
@@ -198,7 +190,7 @@ function generateSpikes(){
     spikesGroup.add(spike);
   }
 }
-<<<<<<< HEAD
+
 function restartGame(){
   gameState= "PLAY";
   stoneGroup.destroyEach();
@@ -209,8 +201,7 @@ function restartGame(){
   iron.y=50;
   restart.visible= false;
 }
-=======
->>>>>>> b93ab3fa34fde2c7416aaa1a67e4791723c39275
+
       
 
 
